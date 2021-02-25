@@ -114,7 +114,7 @@ function submitForm()
 async function sendMail(name, email, subject, text, element)
 {
   return await  Email.send({
-    SecureToken : "7a052d41-bd87-40fd-ae64-97004ae55e9a",
+    SecureToken : "213d98ad-a408-4324-9c4f-55fa6c5f929c",
     To : "viktoreeeee@gmail.com",
     From : "viktoreeeee@gmail.com",
     Subject : `${name} salje poruku => tema ${subject}`,
