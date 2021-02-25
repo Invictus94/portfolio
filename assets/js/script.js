@@ -96,7 +96,7 @@ function submitForm()
 function sendMail(name, email, subject, text, element)
 {
   Email.send({
-    SecureToken : "2e855e47-936d-4c10-b0c6-62f47ba71293",
+    SecureToken : "06e64164-6e38-4af0-aba2-896408df2c1e",
     To : "viktoreeeee@gmail.com",
     From : "viktoreeeee@gmail.com",
     Subject : `${name} salje poruku => tema ${subject}`,
@@ -110,13 +110,4 @@ function sendMail(name, email, subject, text, element)
     }
   }
 );
-//   Email.send({
-//     SecureToken : "0a38b611-693d-41e5-8690-6570c57b8896",
-//     To : "viktoreeeee@gmail.com",
-//     From : "viktoreeeee@gmail.com",
-//     Subject : '${name} ${email} ${subject}',
-//     Body : '${text}',
-// }).then(
-//   message => alert("OK")
-// );
 }
