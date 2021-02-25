@@ -90,24 +90,33 @@ function submitForm()
   var subject = document.getElementById("123").value;
   var message = document.getElementById("124").value;
   
-  sendMail(name, email, subject, message, element);
+  var result = sendMail(name, email, subject, message, element);
+  result.then(function(resultValue) {
+  if(resultValue == "OK")
+  {
+     element.innerHTML = "E-Mail sent successfully!";
+     element.style.backgroundColor = 'green';
+     element.onclick = function() {
+       return false;
+     };
+  }
+  else
+  {
+      element.innerHTML = resultValue;
+      element.style.backgroundColor = 'red';
+      element.onclick = function() {
+        return false;
+      };   
+    }
+  });
 }
 
-function sendMail(name, email, subject, text, element)
+async function sendMail(name, email, subject, text, element)
 {
-  Email.send({
+  return await  Email.send({
     SecureToken : "7a052d41-bd87-40fd-ae64-97004ae55e9a",
     To : "viktoreeeee@gmail.com",
     From : "viktoreeeee@gmail.com",
     Subject : `${name} salje poruku => tema ${subject}`,
     Body : `poruka: ${text} <br/> ${name}-ov Mail je : ${email}`
-}).then(
-  message => {
-    element.innerHTML = "E-Mail sent successfully!";
-    element.style.backgroundColor = 'green';
-    element.onclick = function() {
-      return false;
-    }
-  }
-);
-}
+});
