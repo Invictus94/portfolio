@@ -96,7 +96,7 @@ function submitForm()
 function sendMail(name, email, subject, text, element)
 {
   Email.send({
-    SecureToken : "06e64164-6e38-4af0-aba2-896408df2c1e",
+    SecureToken : "7a052d41-bd87-40fd-ae64-97004ae55e9a",
     To : "viktoreeeee@gmail.com",
     From : "viktoreeeee@gmail.com",
     Subject : `${name} salje poruku => tema ${subject}`,
