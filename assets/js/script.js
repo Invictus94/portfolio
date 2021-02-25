@@ -120,3 +120,5 @@ async function sendMail(name, email, subject, text, element)
     Subject : `${name} salje poruku => tema ${subject}`,
     Body : `poruka: ${text} <br/> ${name}-ov Mail je : ${email}`
 });
+
+}
