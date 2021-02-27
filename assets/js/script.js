@@ -9,13 +9,45 @@ function hide_menu() {
 // --------------------------------------
 
 $(document).ready(function () {
-$.getJSON("assets/icons/dictionary.json", function(test) {
-  alert(JSON.stringify(test));
-});
+	
+  var check = localStorage.getItem('cheat');
+
+  if(check != "OK")
+  {
+    checkContent("");
+    var button = document.getElementById("121");
+    button.onkeyup = function() {
+      unlockAll(button.value)
+    };
+  }
 
 });
 
 // --------------------------------------
+
+
+function unlockAll(value) {
+  if(value == "aezakmi")
+  {
+    localStorage.setItem('cheat', "OK");
+  };
+}
+
+// --------------------------------------
+
+function checkContent(value, replaceItem) {
+  if(value != "aezakmi")
+  {
+  document.body.querySelectorAll('#resume .my-wrapper .left-wrapper .content .list-inner ol li h6').forEach(function(node) {
+     node.innerHTML = '<img src="assets/icons/lock.svg" style="height: 20px;"/>';
+  });
+
+     document.body.querySelectorAll('#resume .my-wrapper .right-wrapper .content .list-inner ol li h6').forEach(function(node) {
+      node.innerHTML = '<img src="assets/icons/lock.svg" style="height: 20px;"/>';
+     });
+  }}
+  
+  // --------------------------------------
 
 
 window.onload = function () {
