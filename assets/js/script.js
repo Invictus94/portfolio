@@ -1,4 +1,15 @@
 
+// --------------------------------------
+// Global Variable
+
+var dictionary;
+var advancedViewKey;
+var storageName;
+var storageValue;
+
+// --------------------------------------
+
+
 function show_menu() {
   $('#show_menuitems').addClass('active');
 }
@@ -9,82 +20,103 @@ function hide_menu() {
 // --------------------------------------
 
 $(document).ready(function () {
-	
-  var check = localStorage.getItem('cheat');
 
-  if(check != "OK")
-  {
-    checkContent("");
-    var button = document.getElementById("121");
-    button.onkeyup = function() {
-      unlockAll(button.value)
-    };
-  }
+  var url = CryptoJS.enc.Hex.parse('68747470733a2f2f696e76696374757339342e6769746875622e696f2f706f7274666f6c696f2f6173736574732f746578742f64696374696f6e6172792e6a736f6e');
 
-  var url = "https://invictus94.github.io/portfolio/assets/text/dictionary.json";
   $.ajax({
-      type: 'GET',
-      dataType: 'json',  //use jsonp data type in order to perform cross domain ajax
-      crossDomain: true,
-      url: url,
-      success: function (responseData) {
+    type: 'GET',
+    dataType: 'json',
+    crossDomain: true,
+    url: url.toString(CryptoJS.enc.Utf8),
+    success: function (responseData) {
 
-          alert(responseData.languages["fr"]["btn-yes"]);
+      /* preuzimanje podataka */
 
-      },
-      error: function (responseData, textStatus, errorThrown) {
-         alert('Dictionary load failed.');
+      dictionary = responseData;
+      advancedViewKey = CryptoJS.enc.Hex.parse(dictionary.code["advancedViewKljuc"]).toString(CryptoJS.enc.Utf8);
+      storageName = CryptoJS.enc.Hex.parse(dictionary.code["storageName"]).toString(CryptoJS.enc.Utf8);
+      storageValue = CryptoJS.enc.Hex.parse(dictionary.code["storageValue"]).toString(CryptoJS.enc.Utf8);
+
+            /* provjera nivoa autentif */
+
+      var check = localStorage.getItem(storageName);
+
+      if (check != storageValue) {
+        checkContent("");
+        var button = document.getElementById("121");
+        button.onkeyup = function () {
+          unlockAll(button.value)
+        };
       }
+      else
+      {
+        checkContent("", true);
+      }
+
+                  /* prijevod */
+
+      document.documentElement.lang = navigator.language || navigator.userLanguage;
+
+    },
+    error: function (responseData, textStatus, errorThrown) {
+      alert('Dictionary load failed.');
+    }
   });
-
-//   $.ajax({
- 
-//   crossDomain: true,
-//     type: 'GET',
-//     url: 'https://github.com/Invictus94/portfolio/blob/main/assets/text/dictionary.json',
-//     dataType: "jsonp",
-//     xhrFields: {
-//         withCredentials: false
-//     },
-//     success: function (result) {
-//         console.log(result);
-//     },
-//     error: function (xhr, errorText) {
-//         console.log('Error ' + xhr.responseText);
-//     }
-// }); 
-
-
-//  $.each(data, function (key, model) {
-//   alert(langdata.languages["fr"]["btn-yes"]);
-//  });
 });
+
+// --------------------------------------
+
+// function convert() {
+
+// var encrypted = CryptoJS.AES.encrypt("value", "tajna");
+
+// var decrypted = CryptoJS.AES.decrypt(encrypted, "tajna");
+// alert(decrypted);
+// }
+// --------------------------------------
+
+function translate(key) {
+  var currentLanguage = $('html').attr('lang');
+  return dictionary.languages[currentLanguage.substr(0, 2)][key];
+}
 
 // --------------------------------------
 
 
 function unlockAll(value) {
-  if(value == "aezakmi")
-  {
-    localStorage.setItem('cheat', "OK");
+  if (value == advancedViewKey) {
+    localStorage.setItem(storageName, storageValue);
   };
 }
 
 // --------------------------------------
 
-function checkContent(value, replaceItem) {
-  if(value != "aezakmi")
-  {
-  document.body.querySelectorAll('#resume .my-wrapper .left-wrapper .content .list-inner ol li h6').forEach(function(node) {
-     node.innerHTML = '<img src="assets/icons/lock.svg" style="height: 20px;"/>';
-  });
+function checkContent(value, justRemoveClass) {
+  if (value != advancedViewKey || justRemoveClass) {
+    document.body.querySelectorAll('#resume .my-wrapper .left-wrapper .content .list-inner ol li h6').forEach(function (node) {
 
-     document.body.querySelectorAll('#resume .my-wrapper .right-wrapper .content .list-inner ol li h6').forEach(function(node) {
-      node.innerHTML = '<img src="assets/icons/lock.svg" style="height: 20px;"/>';
-     });
-  }}
-  
-  // --------------------------------------
+      if (justRemoveClass != 1) {
+        node.innerHTML = '<img src="assets/icons/lock.svg" style="height: 20px;"/>';
+      }
+
+      if (node.classList.contains("hidden")) {
+        node.classList.remove("hidden");
+      }
+    });
+
+    document.body.querySelectorAll('#resume .my-wrapper .right-wrapper .content .list-inner ol li h6').forEach(function (node) {
+      if (justRemoveClass != 1) {
+        node.innerHTML = '<img src="assets/icons/lock.svg" style="height: 20px;"/>';
+      }
+
+      if (node.classList.contains("hidden")) {
+        node.classList.remove("hidden");
+      }
+    });
+  }
+}
+
+// --------------------------------------
 
 
 window.onload = function () {
@@ -142,8 +174,7 @@ function animate(elem, style, unit, from, to, time, textelem) {
 
 // --------------------------------------
 
-function submitForm()
-{
+function submitForm() {
   var element = document.getElementById("button-send");
   element.innerHTML = "Sending...";
   element.style.backgroundColor = 'orange';
@@ -152,36 +183,33 @@ function submitForm()
   var email = document.getElementById("122").value;
   var subject = document.getElementById("123").value;
   var message = document.getElementById("124").value;
-  
+
   var result = sendMail(name, email, subject, message, element);
-  result.then(function(resultValue) {
-  if(resultValue == "OK")
-  {
-     element.innerHTML = "E-Mail sent successfully!";
-     element.style.backgroundColor = 'green';
-     element.onclick = function() {
-       return false;
-     };
-  }
-  else
-  {
+  result.then(function (resultValue) {
+    if (resultValue == "OK") {
+      element.innerHTML = "E-Mail sent successfully!";
+      element.style.backgroundColor = 'green';
+      element.onclick = function () {
+        return false;
+      };
+    }
+    else {
       element.innerHTML = resultValue;
       element.style.backgroundColor = 'red';
-      element.onclick = function() {
+      element.onclick = function () {
         return false;
-      };   
+      };
     }
   });
 }
 
-async function sendMail(name, email, subject, text, element)
-{
-  return await  Email.send({
-    SecureToken : "213d98ad-a408-4324-9c4f-55fa6c5f929c",
-    To : "viktoreeeee@gmail.com",
-    From : "viktoreeeee@gmail.com",
-    Subject : `${name} salje poruku => tema ${subject}`,
-    Body : `poruka: ${text} <br/> ${name}-ov Mail je : ${email}`
-});
+async function sendMail(name, email, subject, text, element) {
+  return await Email.send({
+    SecureToken: "213d98ad-a408-4324-9c4f-55fa6c5f929c",
+    To: "viktoreeeee@gmail.com",
+    From: "viktoreeeee@gmail.com",
+    Subject: `${name} salje poruku => tema ${subject}`,
+    Body: `poruka: ${text} <br/> ${name}-ov Mail je : ${email}`
+  });
 
 }

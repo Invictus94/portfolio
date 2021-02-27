@@ -1104,3 +1104,9 @@ section {
           box-shadow: none; }
 
 /*# sourceMappingURL=style.css.map */
+
+/*global style */
+
+.hidden {
+  visibility: hidden;
+}

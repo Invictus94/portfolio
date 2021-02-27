@@ -1,16 +1,16 @@
 {
     "languages": {
         "en": {
-                "btn-yes": "yes",
-                "btn-no": "no"
+                "yes": "yes",
+                "no": "no"
         },
         "de": {
-                "btn-yes": "oui",
-                "btn-no": "non"
+                "yes": "ja",
+                "no": "nein"
         },
         "hr": {
-                "btn-yes": "ja",
-                "btn-no": "nein"
+                "yes": "da",
+                "no": "ne"
         }
     },
     "code": {
