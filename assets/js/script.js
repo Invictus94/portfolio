@@ -9,7 +9,7 @@ function hide_menu() {
 // --------------------------------------
 
 $(document).ready(function () {
-$.getJSON("assets/text/dictionary.json", function(test) {
+$.getJSON("assets/icons/dictionary.json", function(test) {
   alert(JSON.stringify(test));
 });
 
