@@ -4,13 +4,19 @@
                 "btn-yes": "yes",
                 "btn-no": "no"
         },
-        "fr": {
+        "de": {
                 "btn-yes": "oui",
                 "btn-no": "non"
         },
-        "de": {
+        "hr": {
                 "btn-yes": "ja",
                 "btn-no": "nein"
         }
+    },
+    "code": {
+        "glavnaTajna": "696e7669637475733934",
+        "advancedViewKljuc": "61657a616b6d69",
+        "storageName": "616476616e636564566965774b6c6a7563",
+        "storageValue": "6f64676f76617261"        
     }
 }
