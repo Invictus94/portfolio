@@ -21,6 +21,39 @@ $(document).ready(function () {
     };
   }
 
+
+  $(document).load('http://google.com'); // SERIOUSLY!
+ 
+  $.ajax({
+      url: 'https://github.com/Invictus94/portfolio/blob/main/assets/text/dictionary.json',
+      type: 'GET',
+      dataType: 'jsonp',
+      success: function(res) {
+          alert(res.responseText);
+      }
+  });
+
+//   $.ajax({
+ 
+//   crossDomain: true,
+//     type: 'GET',
+//     url: 'https://github.com/Invictus94/portfolio/blob/main/assets/text/dictionary.json',
+//     dataType: "jsonp",
+//     xhrFields: {
+//         withCredentials: false
+//     },
+//     success: function (result) {
+//         console.log(result);
+//     },
+//     error: function (xhr, errorText) {
+//         console.log('Error ' + xhr.responseText);
+//     }
+// }); 
+
+
+//  $.each(data, function (key, model) {
+//   alert(langdata.languages["fr"]["btn-yes"]);
+//  });
 });
 
 // --------------------------------------
