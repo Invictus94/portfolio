@@ -21,15 +21,19 @@ $(document).ready(function () {
     };
   }
 
-
-  $(document).load('http://google.com'); // SERIOUSLY!
- 
+  var url = "https://invictus94.github.io/portfolio/assets/text/dictionary.json";
   $.ajax({
-      url: 'https://github.com/Invictus94/portfolio/blob/main/assets/text/dictionary.json',
       type: 'GET',
-      dataType: 'jsonp',
-      success: function(res) {
-          alert(res.responseText);
+      dataType: 'json',  //use jsonp data type in order to perform cross domain ajax
+      crossDomain: true,
+      url: url,
+      success: function (responseData) {
+
+          alert(responseData.languages["fr"]["btn-yes"]);
+
+      },
+      error: function (responseData, textStatus, errorThrown) {
+         alert('Dictionary load failed.');
       }
   });
 
