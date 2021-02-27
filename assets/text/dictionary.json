@@ -1,0 +1,14 @@
+"languages": {
+         "en": {
+                 "btn-yes": "yes",
+                 "btn-no": "no"
+         },
+         "fr": {
+                 "btn-yes": "oui",
+                 "btn-no": "non"
+         },
+         "de": {
+                 "btn-yes": "ja",
+                 "btn-no": "nein"
+         }
+     }
