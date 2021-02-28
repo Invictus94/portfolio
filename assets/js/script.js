@@ -59,7 +59,7 @@ $(document).ready(function () {
 
       translatePage();
 
-      alert(translate('about_me'));
+      alert(translate('about-me'));
 
     },
     error: function (responseData, textStatus, errorThrown) {
