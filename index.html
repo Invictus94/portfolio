@@ -16,12 +16,11 @@
                     <i onclick="hide_menu()" class="flaticon-cancel"></i>
                 </span>
                 <ul>
-                    <li><a onclick="hide_menu()" href="#home">Home</a></li>
-                    <li><a onclick="hide_menu()" href="#about">Specialization</a></li>
-                    <li><a onclick="hide_menu()" href="#resume">Resume</a></li>
-                    <li><a onclick="hide_menu()" href="#portfolio">Projects</a></li>
-                    <li><a onclick="hide_menu()" href="#textimonial">Reviews</a></li>
-                    <li><a onclick="hide_menu()" href="#contact">Contact</a></li>
+                    <li><a onclick="hide_menu()" href="#home" data-key="home"></a></li>
+                    <li><a onclick="hide_menu()" href="#about" data-key="skills"></a></li>
+                    <li><a onclick="hide_menu()" href="#resume" data-key="timeline"></a></li>
+                    <li><a onclick="hide_menu()" href="#portfolio" data-key="further-skills"></a></li>
+                    <li><a onclick="hide_menu()" href="#contact" data-key="contact"></a></li>
                 </ul>
             </div>
         </div>
@@ -58,7 +57,7 @@
 							<code><font color="#00a305">Console</font>.WriteLine(<font color="#E31C25">"Hello, world!"</font>);</code>
                             </div>
                             <div class="name-box">
-                                <h1><font size="3">&lt;title class="developer"&gt;</font><div><br/> Here is <span>Viktor Bajs-Jovanović</span>.</div> <br/> <font size="3">&lt;/title&gt;</font></h1>
+                                <h1><font size="3">&lt;title class="developer"&gt;</font><div><br/> <div data-key="here-is"></div> <span>Viktor Bajs-Jovanović</span>.</div> <br/> <font size="3">&lt;/title&gt;</font></h1>
                             </div>
                             <div class="line"></div>
                         </div>
@@ -77,8 +76,8 @@
                             <div class="left-wrapper">
                                 <div class="content">
                                     <div class="title">
-                                        <h4>About me</h4>
-                                        <h2>my task is to <span>develop</span> applications and make them <span>accessible</span>.</h2>
+                                        <h4 data-key="about-me">About me</h4>
+                                        <h2 data-key="my-task-is-to"> <span>develop</span> applications and make them <span>accessible</span>.</h2>
                                         <p>I love everything that has to do with programming,
 										actually I like to create features which make a customer's
 										life easier and to know that I'm part of it.</p>

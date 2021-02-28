@@ -2,15 +2,28 @@
     "languages": {
         "en": {
                 "introduce": "Introduce",
-                "no": "no"
+                "no": "no",
+                "home": "Home",
+                "skills": "Skills",
+                "timeline": "Timeline",
+                "further-skills": "Further skills",
+                "contact": "Contact",
+                "here-is": "Here is",
+                "about-me": "About me",
+                "my-task-is-to": "my task is to"
+
         },
         "de": {
                 "introduce": "Einführung",
-                "no": "nein"
+                "no": "nein",
+                "home": "Heim"
+
         },
         "hr": {
                 "introduce": "Uvod",
-                "no": "ne"
+                "no": "ne",
+                "home": "Pocetak"
+
         }
     },
     "code": {

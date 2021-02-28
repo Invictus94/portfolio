@@ -77,7 +77,8 @@ function changeLang(lang)
 function translatePage()
 {
   document.querySelectorAll('[data-key]').forEach(function (node) {
-    node.innerHTML = translate(node.dataset.key);
+   // node.innerHTML = translate(node.dataset.key);
+    node.insertAdjacentHTML( 'beforeBegin', translate(node.dataset.key) );
   });
 }
 
