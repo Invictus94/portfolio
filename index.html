@@ -16,11 +16,11 @@
                     <i onclick="hide_menu()" class="flaticon-cancel"></i>
                 </span>
                 <ul>
-                    <li><a onclick="hide_menu()" href="#home" data-key="home"></a></li>
-                    <li><a onclick="hide_menu()" href="#about" data-key="skills"></a></li>
-                    <li><a onclick="hide_menu()" href="#resume" data-key="timeline"></a></li>
-                    <li><a onclick="hide_menu()" href="#portfolio" data-key="further_skills"></a></li>
-                    <li><a onclick="hide_menu()" href="#contact" data-key="contact"></a></li>
+                    <li><a onclick="hide_menu()" href="#home"><div data-key="home"></div></a></li>
+                    <li><a onclick="hide_menu()" href="#about"><div data-key="skills"></div></a></li>
+                    <li><a onclick="hide_menu()" href="#resume"><div data-key="timeline"></div></a></li>
+                    <li><a onclick="hide_menu()" href="#portfolio"><div data-key="further_skills"></div></a></li>
+                    <li><a onclick="hide_menu()" href="#contact"><div data-key="contact"></div></a></li>
                 </ul>
             </div>
         </div>
@@ -51,13 +51,21 @@
                     <div class="row">
                         <div class="my-wrapper">
                             <div class="inter">
-                                <h6 data-key="introduce"></h6>
+                                <h6><div data-key="introduce"></div></h6>
                             </div>
-                            <div class="welcome-box">
-							<code><font color="#00a305">Console</font>.WriteLine(<font color="#E31C25">"Hello, world!"</font>);</code>
+                            <div class="welcome-box" id="typing">
+							<code><font color="#49c2ac">Console</font>.WriteLine(<font color="#c7835b">"Hello, world!"</font>);</code>
                             </div>
                             <div class="name-box">
-                                <h1><font size="3">&lt;title class="developer"&gt;</font><div><br/> <div data-key="here_is"></div> <span>Viktor Bajs-Jovanović</span>.</div> <br/> <font size="3">&lt;/title&gt;</font></h1>
+                                <h1>
+                                    <font size="3">&lt;title class="developer"&gt;</font>
+                                    <br/>
+                                    <div>
+                                            <div data-key="here_is" style="width: 0px; margin: 0px;"></div>
+                                            <span> Viktor Bajs-Jovanović</span>.
+                                    </div>
+                                    <font size="3">&lt;/title&gt;</font>
+                                </h1>
                             </div>
                             <div class="line"></div>
                         </div>
@@ -76,11 +84,9 @@
                             <div class="left-wrapper">
                                 <div class="content">
                                     <div class="title">
-                                        <h4 data-key="about_me">About me</h4>
-                                        <h2 data-key="my_task_is_to"> <span>develop</span> applications and make them <span>accessible</span>.</h2>
-                                        <p>I love everything that has to do with programming,
-										actually I like to create features which make a customer's
-										life easier and to know that I'm part of it.</p>
+                                        <h4><div data-key="about_me"></div></h4>
+                                        <h2><div data-key="my_task_is_to"></div><span><div data-key="develop"></div></span><div data-key="applications_and_make_them"></div><span><div data-key="accessible"></div></span>.</h2>
+                                        <p><div data-key="I_love_everything_that_has_to_do_with_programming,_actually_I_like_to_create_features_which_make_a_customer's_life_easier_and_to_know_that_I'm_part_of_it"></div>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +131,7 @@
                                 </div>
                             </div>
                             <div class="inter">
-                                <h6>SKILLS</h6>
+                                <h6 style="text-transform: uppercase;"><div data-key="skills"></div></h6>
                             </div>
                         </div>
                     </div>
@@ -139,11 +145,10 @@
                             <div class="left-wrapper">
                                 <div class="content">
                                     <div class="head">
-                                        <h2>Experience</h2>
+                                        <h2><div data-key="experience"></div></h2>
                                     </div>
                                     <div class="list-inner">
                                         <ol>
-										
 										    <li>
                                                 <h4>Software Developer</h4>
                                                 <h6 class="hidden">EWD</h6>

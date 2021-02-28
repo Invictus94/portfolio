@@ -57,9 +57,12 @@ $(document).ready(function () {
 
       document.documentElement.lang = navigator.language || navigator.userLanguage;
 
-      translatePage();
+      //visak
+    //  document.documentElement.lang = "en";
+    //  alert(translate('about-me'));
+      //
 
-      alert(translate('about-me'));
+      translatePage();
 
     },
     error: function (responseData, textStatus, errorThrown) {
@@ -78,8 +81,10 @@ function changeLang(lang)
 function translatePage()
 {
   document.querySelectorAll('[data-key]').forEach(function (node) {
-    node.innerHTML = translate(node.dataset.key);
-   // node.insertAdjacentHTML( 'beforeBegin', translate(node.dataset.key) );
+    
+   var str = node.parentNode.innerHTML;
+   node.parentElement.innerHTML = translate(node.dataset.key) + str.substring(str.indexOf(node.outerHTML));
+
   });
 }
 

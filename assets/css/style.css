@@ -271,9 +271,17 @@ section {
       @media (min-width: 576px) and (max-width: 1199.98px) {
         #home .my-wrapper .line {
           margin: .9375rem; } }
+
     #home .my-wrapper .welcome-box {
       display: inline-block;
-      margin: 1.875rem 0; }
+      margin: 1.875rem 0;
+text-align: center;
+
+      overflow: hidden; 
+  border-right: 5px solid white; 
+  white-space: nowrap; 
+  margin: 0 auto;
+  }
       @media screen and (max-width: 575.98px) {
         #home .my-wrapper .welcome-box {
           margin: .625rem 0;
@@ -324,17 +332,29 @@ section {
         font-weight: 600;
 		/* line-height: unset; */
 		}
+
+    #home .my-wrapper .name-box h1 div {
+display: table;
+word-wrap: break-word;
+width: 100%;
+text-align: center;
+    }
 		
-		      #home .my-wrapper .name-box h1 div{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 5px solid white; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+		      /* #home .my-wrapper .name-box h1 div {
+  overflow: hidden; 
+  border-right: 5px solid white; 
+  white-space: normal; 
+  margin: 0 auto; 
+  display: inline-flex;
+} */
+
+#typing{
   animation: 
-    typing 3.5s steps(20, end),
+    typing 3.5s steps(20, end) forwards,
     blink-caret .75s step-end infinite,
 	white-space-normal 0s 4s forwards;
 }
+
 @keyframes white-space-normal  { to { white-space: normal; } }
 
 /* The typing effect */

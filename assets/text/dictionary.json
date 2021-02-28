@@ -10,8 +10,13 @@
                 "contact": "Contact",
                 "here_is": "Here is",
                 "about_me": "About me",
-                "my_task_is_to": "my task is to"
-
+                "my_task_is_to": "my task is to",
+                "develop": "develop",
+                "applications_and_make_them": "applications and make them",
+                "accessible": "accessible",
+                "I_love_everything_that_has_to_do_with_programming,_actually_I_like_to_create_features_which_make_a_customer's_life_easier_and_to_know_that_I'm_part_of_it": "I love everything that has to do with programming, actually I like to create features which make a customer's life easier and to know that I'm part of it",
+                "experience": "Experience"
+                
         },
         "de": {
                 "introduce": "Einführung",
