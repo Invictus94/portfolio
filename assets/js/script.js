@@ -57,12 +57,29 @@ $(document).ready(function () {
 
       document.documentElement.lang = navigator.language || navigator.userLanguage;
 
+      translatePage();
+
+
     },
     error: function (responseData, textStatus, errorThrown) {
       alert('Dictionary load failed.');
     }
   });
 });
+
+function changeLang(lang)
+{
+  document.documentElement.lang = lang;
+  translatePage();
+  window.scrollTo(0,0);
+}
+
+function translatePage()
+{
+  document.querySelectorAll('[data-key]').forEach(function (node) {
+    node.innerHTML = translate(node.dataset.key);
+  });
+}
 
 // --------------------------------------
 
@@ -76,8 +93,9 @@ $(document).ready(function () {
 // --------------------------------------
 
 function translate(key) {
-  var currentLanguage = $('html').attr('lang');
-  return dictionary.languages[currentLanguage.substr(0, 2)][key];
+  //dictionary.languages["de"]["introduce"] <-> podsjetnik
+ // var currentLanguage = $('html').attr('lang');
+  return dictionary.languages[document.documentElement.lang.substr(0, 2)][key];
 }
 
 // --------------------------------------
