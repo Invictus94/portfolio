@@ -6,11 +6,11 @@
                 "home": "Home",
                 "skills": "Skills",
                 "timeline": "Timeline",
-                "further-skills": "Further skills",
+                "further_skills": "Further skills",
                 "contact": "Contact",
-                "here-is": "Here is",
-                "about-me": "About me",
-                "my-task-is-to": "my task is to"
+                "here_is": "Here is",
+                "about_me": "About me",
+                "my_task_is_to": "my task is to"
 
         },
         "de": {
