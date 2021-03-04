@@ -16,11 +16,11 @@
                     <i onclick="hide_menu()" class="flaticon-cancel"></i>
                 </span>
                 <ul>
-                    <li><a onclick="hide_menu()" href="#home"><div data-key="home"></div></a></li>
-                    <li><a onclick="hide_menu()" href="#about"><div data-key="skills"></div></a></li>
-                    <li><a onclick="hide_menu()" href="#resume"><div data-key="timeline"></div></a></li>
-                    <li><a onclick="hide_menu()" href="#portfolio"><div data-key="further_skills"></div></a></li>
-                    <li><a onclick="hide_menu()" href="#contact"><div data-key="contact"></div></a></li>
+                    <li><a onclick="hide_menu()" href="#home" data-key="home"></a></li>
+                    <li><a onclick="hide_menu()" href="#about" data-key="skills"></a></li>
+                    <li><a onclick="hide_menu()" href="#resume" data-key="timeline"></a></li>
+                    <li><a onclick="hide_menu()" href="#portfolio" data-key="further_skills"></a></li>
+                    <li><a onclick="hide_menu()" href="#contact" data-key="contact"></a></li>
                 </ul>
             </div>
         </div>
@@ -51,7 +51,7 @@
                     <div class="row">
                         <div class="my-wrapper">
                             <div class="inter">
-                                <h6><div data-key="introduce"></div></h6>
+                                <h6 data-key="introduce"></h6>
                             </div>
                             <div class="welcome-box" id="typing">
 							<code><font color="#49c2ac">Console</font>.WriteLine(<font color="#c7835b">"Hello, world!"</font>);</code>
@@ -60,10 +60,7 @@
                                 <h1>
                                     <font size="3">&lt;title class="developer"&gt;</font>
                                     <br/>
-                                    <div>
-                                            <div data-key="here_is" style="width: 0px; margin: 0px;"></div>
-                                            <span> Viktor Bajs-Jovanović</span>.
-                                    </div>
+                                    <h1 id="center"><span data-key="here_is"></span><span id="highlight"> Viktor Bajs-Jovanović</span>.</h1>
                                     <font size="3">&lt;/title&gt;</font>
                                 </h1>
                             </div>
@@ -85,8 +82,8 @@
                                 <div class="content">
                                     <div class="title">
                                         <h4><div data-key="about_me"></div></h4>
-                                        <h2><div data-key="my_task_is_to"></div><span><div data-key="develop"></div></span><div data-key="applications_and_make_them"></div><span><div data-key="accessible"></div></span>.</h2>
-                                        <p><div data-key="I_love_everything_that_has_to_do_with_programming,_actually_I_like_to_create_features_which_make_a_customer's_life_easier_and_to_know_that_I'm_part_of_it"></div>.</p>
+                                        <h2><span data-key="my_task_is_to"></span>&nbsp;<span id="highlight" data-key="develop"></span>&nbsp;<span data-key="applications_and_make_them"></span>&nbsp;<span id="highlight" data-key="accessible"></span>.</h2>
+                                        <p data-key="I_love_everything_that_has_to_do_with_programming,_actually_I_like_to_create_features_which_make_a_customer's_life_easier_and_to_know_that_I'm_part_of_it"></p>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="inter">
-                                <h6 style="text-transform: uppercase;"><div data-key="skills"></div></h6>
+                                <h6 data-key="skills" style="text-transform: uppercase;"></h6>
                             </div>
                         </div>
                     </div>
@@ -145,57 +142,57 @@
                             <div class="left-wrapper">
                                 <div class="content">
                                     <div class="head">
-                                        <h2><div data-key="experience"></div></h2>
+                                        <h2 data-key="experience"></h2>
                                     </div>
                                     <div class="list-inner">
                                         <ol>
 										    <li>
-                                                <h4>Software Developer</h4>
+                                                <h4 data-key="software_developer"></h4>
                                                 <h6 class="hidden">EWD</h6>
                                                 <span>09/2018 – </span>
-												<p>Bayern, Germany</p>
+												<p data-key="bayern,_germany"></p>
                                             </li>
 											
 											<li>
-                                                <h4>IT System Electronics Technician</h4>
+                                                <h4 data-key="it_system_electronics_technician"></h4>
                                                 <h6 class="hidden">Netzwerkservice Fischer</h6>
                                                 <span>06/2018 – 07/2018</span>
-												<p>Buchbach, Germany</p>
+												<p data-key="buchbach,_germany"></p>
                                             </li>
 											
 											<li>
-                                                <h4>Panel Wirer/Electrician</h4>
+                                                <h4 data-key="panel_wirer/electrician"></h4>
                                                 <h6 class="hidden">Geisberger Gesellschaft BioGas</h6>
                                                 <span>06/2017 – 06/2018</span>
-												<p>Schwindegg, Germany</p>
+												<p data-key="schwindegg,_germany"></p>
                                             </li>
 											
 											<li>
-                                                <h4>Junior Software Developer</h4>
+                                                <h4 data-key="junior_software_developer"></h4>
                                                 <h6 class="hidden">ABBA Bank und Leasing Software </h6>
                                                 <span>04/2016 – 05/2016</span>
-												<p>Bilje, Croatia</p>
+												<p data-key="bilje,_croatia"></p>
                                             </li>
 											
 										    <li>
-                                                <h4>Own warehouse management program "INVICTUS"</h4>
+                                                <h4 data-key="own_warehouse_management_program">"INVICTUS"</h4>
                                                 <h6 class="hidden">TEHNO FILTER d.o.o. (GmbH)</h6>
                                                 <span>01/2016 – 03/2016</span>
-												<p>Beli Manastir, Croatia</p>
+												<p data-key="beli_manastir,_croatia"></p>
                                             </li>
 											
                                             <li>
-                                                <h4>Computer scientist</h4>
+                                                <h4 data-key="computer_scientist"></h4>
                                                 <h6 class="hidden">EcoCortec d.o.o. (GmbH)</h6>
                                                 <span>10/2014 – 01/2015</span>
-												<p>Beli Manastir, Croatia</p>
+												<p data-key="beli_manastir,_croatia"></p>
                                             </li>
 											
                                             <li>
-                                                <h4>Call Center Agent in Technical Support</h4>
-                                                <h6 class="hidden">T-HT (Croatian Telecommunications)</h6>
+                                                <h4 data-key="call_center_agent_in_technical_support"></h4>
+                                                <h6 class="hidden" data-key="t_ht_croatian_telecommunications"></h6>
                                                 <span>03/2014 – 08/2014</span>
-												<p>Osijek, Croatia</p>
+												<p data-key="osijek,_croatia"></p>
                                             </li>
 
                                         </ol>

@@ -58,7 +58,7 @@ $(document).ready(function () {
       document.documentElement.lang = navigator.language || navigator.userLanguage;
 
       //visak
-    //  document.documentElement.lang = "en";
+      document.documentElement.lang = "en";
     //  alert(translate('about-me'));
       //
 
@@ -82,9 +82,23 @@ function translatePage()
 {
   document.querySelectorAll('[data-key]').forEach(function (node) {
     
-   var str = node.parentNode.innerHTML;
-   node.parentElement.innerHTML = translate(node.dataset.key) + str.substring(str.indexOf(node.outerHTML));
+    // var str = node.parentNode.innerHTML;
+    // var first = str.split(node.outerHTML)[0];
+    // //var second = str.substring(str.indexOf(node.outerHTML));
+    // console.log(str.split(node.outerHTML));
+    // node.parentElement.innerHTML = translate(node.dataset.key) + str.substring(first.lastIndexOf(">"), str.indexOf(node.outerHTML));
 
+    // if(node.tagName.toLowerCase() == 'span')
+    // {
+    //   node.innerHTML = translate(node.dataset.key);
+    // }
+    // else
+    // {
+
+      node.textContent = translate(node.dataset.key);
+
+
+  //  }
   });
 }
 
