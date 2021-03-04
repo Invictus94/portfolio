@@ -58,7 +58,8 @@
                 "faculty": "Faculty",
                 "sending": "Sending...",       
                 "email_sent_successfully": "E-Mail sent successfully!",
-                "click_on_the_flag_to_change_the_language" : "*click on the flag to change the language"                   
+                "click_on_the_flag_to_change_the_language" : "*click on the flag to change the language",
+                "check_fields":"Fill empty text fields!"                  
         },
         "de": {
                 "introduce": "Einführung",
@@ -74,7 +75,7 @@
                 "applications_and_make_them": "und sie zugänglich",
                 "accessible": "herstellen",
                 "experience": "Erfahrung",
-                "I_love_everything_that_has_to_do_with_programming,_actually_I_like_to_create_features_which_make_a_customer's_life_easier_and_to_know_that_I'm_part_of_it": "Ich mag alles, was mit Programmierung zu tun hat. Eigentlich, am liebsten Features zu erstellen, die das Leben eines Benutzers erleichtern und zu wissen dass ich ein Teil davon bin.",
+                "I_love_everything_that_has_to_do_with_programming,_actually_I_like_to_create_features_which_make_a_customer's_life_easier_and_to_know_that_I'm_part_of_it": "Mich interessiert alles, was mit Programmierung zu tun hat. Eigentlich, am liebsten Features zu erstellen, die das Leben eines Benutzers erleichtern und zu wissen dass ich ein Teil davon bin.",
                 "software_developer": "Software Entwickler",
                 "bayern,_germany": "Bayern, Deutschland",
                 "it_system_electronics_technician": "IT System Elektroniker",
@@ -118,7 +119,8 @@
                 "faculty": "Studium",
                 "sending": "Senden läuft...",       
                 "email_sent_successfully": "Email wurde erfolgreich versendet!",
-                "click_on_the_flag_to_change_the_language" : "*Klicken Sie auf die Flagge, um die Sprache zu ändern"  
+                "click_on_the_flag_to_change_the_language" : "*Klicken Sie auf die Flagge, um die Sprache zu ändern",
+                "check_fields":"Füllen Sie leere Textfelder!"
         },
         "hr": {
             "introduce": "Uvod",
@@ -178,7 +180,8 @@
             "faculty": "Fakultet",
             "sending": "Slanje...",       
             "email_sent_successfully": "Mail poslan uspješno!",
-            "click_on_the_flag_to_change_the_language" : "*Klik na zastavu za promjenu jezika"   
+            "click_on_the_flag_to_change_the_language" : "*Klik na zastavu za promjenu jezika",
+            "check_fields":"Popunite prazna polja!"  
         }
     },
     "code": {

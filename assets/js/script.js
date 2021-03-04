@@ -37,7 +37,7 @@ $(document).ready(function () {
       storageName = CryptoJS.enc.Hex.parse(dictionary.code["storageName"]).toString(CryptoJS.enc.Utf8);
       storageValue = CryptoJS.enc.Hex.parse(dictionary.code["storageValue"]).toString(CryptoJS.enc.Utf8);
 
-            /* provjera nivoa autentif */
+      /* provjera nivoa autentif */
 
       var check = localStorage.getItem(storageName);
 
@@ -48,18 +48,17 @@ $(document).ready(function () {
           unlockAll(button.value)
         };
       }
-      else
-      {
+      else {
         checkContent("", true);
       }
 
-                  /* prijevod */
+      /* prijevod */
 
       document.documentElement.lang = navigator.language || navigator.userLanguage;
 
       //visak
-      document.documentElement.lang = "en";
-    //  alert(translate('about-me'));
+      // document.documentElement.lang = "en";
+      //  alert(translate('about-me'));
       //
 
       translatePage();
@@ -71,28 +70,22 @@ $(document).ready(function () {
   });
 });
 
-function changeLang(lang)
-{
+function changeLang(lang) {
   document.documentElement.lang = lang;
   translatePage();
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
 
-function translatePage()
-{
+function translatePage() {
   document.querySelectorAll('[data-key]').forEach(function (node) {
-    if(('placeholder' in node))
-    {
+    if (('placeholder' in node)) {
       node.placeholder = translate(node.dataset.key);
     }
-    else
-    {
-      if(node.id != "hidden")
-      {
+    else {
+      if (node.id != "hidden") {
         node.textContent = translate(node.dataset.key);
       }
-      else
-      {
+      else {
         node.dataset.key = "";
       }
     }
@@ -211,32 +204,39 @@ function animate(elem, style, unit, from, to, time, textelem) {
 // --------------------------------------
 
 function submitForm() {
-  var element = document.getElementById("button-send");
-  element.innerHTML = translate("sending");
-  element.style.backgroundColor = 'orange';
-
   var name = document.getElementById("121").value;
   var email = document.getElementById("122").value;
   var subject = document.getElementById("123").value;
   var message = document.getElementById("124").value;
 
-  var result = sendMail(name, email, subject, message, element);
-  result.then(function (resultValue) {
-    if (resultValue == "OK") {
-      element.innerHTML = translate("email_sent_successfully");
-      element.style.backgroundColor = 'green';
-      element.onclick = function () {
-        return false;
-      };
-    }
-    else {
-      element.innerHTML = resultValue;
-      element.style.backgroundColor = 'red';
-      element.onclick = function () {
-        return false;
-      };
-    }
-  });
+  if (name != "" && email != "" && message != "") {
+    
+    var element = document.getElementById("button-send");
+    element.innerHTML = translate("sending");
+    element.style.backgroundColor = 'orange';
+
+    var result = sendMail(name, email, subject, message, element);
+    result.then(function (resultValue) {
+      if (resultValue == "OK") {
+        element.innerHTML = translate("email_sent_successfully");
+        element.style.backgroundColor = 'green';
+        element.onclick = function () {
+          return false;
+        };
+      }
+      else {
+        element.innerHTML = resultValue;
+        element.style.backgroundColor = 'red';
+        element.onclick = function () {
+          return false;
+        };
+      }
+    });
+  }
+  else
+  {
+    alert(translate("check_fields"));
+  };
 }
 
 async function sendMail(name, email, subject, text, element) {
