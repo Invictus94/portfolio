@@ -56,11 +56,6 @@ $(document).ready(function () {
 
       document.documentElement.lang = navigator.language || navigator.userLanguage;
 
-      //visak
-      // document.documentElement.lang = "en";
-      //  alert(translate('about-me'));
-      //
-
       translatePage();
 
     },
@@ -92,15 +87,6 @@ function translatePage() {
   });
 }
 
-// --------------------------------------
-
-// function convert() {
-
-// var encrypted = CryptoJS.AES.encrypt("value", "tajna");
-
-// var decrypted = CryptoJS.AES.decrypt(encrypted, "tajna");
-// alert(decrypted);
-// }
 // --------------------------------------
 
 function translate(key) {
@@ -210,7 +196,7 @@ function submitForm() {
   var message = document.getElementById("124").value;
 
   if (name != "" && email != "" && message != "") {
-    
+
     var element = document.getElementById("button-send");
     element.innerHTML = translate("sending");
     element.style.backgroundColor = 'orange';
@@ -238,6 +224,8 @@ function submitForm() {
     alert(translate("check_fields"));
   };
 }
+
+// --------------------------------------
 
 async function sendMail(name, email, subject, text, element) {
   return await Email.send({

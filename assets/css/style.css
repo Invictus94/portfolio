@@ -305,32 +305,11 @@ text-align: center;
           max-width: 100%;
           padding: 0 .9375rem;
           margin: 2.625rem 0 .625rem;		  }
-      /* @media screen and (max-width: 575.98px) { */
-        /* #home .my-wrapper .name-box { */
-          /* width: 100%; */
-          /* max-width: 100%; */
-          /* padding: 0 .9375rem; */
-          /* margin: 0 0 .625rem; } } */
-      /* @media (min-width: 576px) and (max-width: 767.98px) { */
-        /* #home .my-wrapper .name-box { */
-          /* width: 75%; */
-          /* max-width: 75%; */
-          /* padding: 0 .9375rem; } } */
-      /* @media (min-width: 768px) and (max-width: 991.98px) { */
-        /* #home .my-wrapper .name-box { */
-          /* width: 70%; */
-          /* max-width: 70%; */
-          /* padding: 0 .9375rem; } } */
-      /* @media (min-width: 992px) and (max-width: 1199.98px) { */
-        /* #home .my-wrapper .name-box { */
-          /* padding: 0 .9375rem; } } */
       #home .my-wrapper .name-box h1 {
-        /* font-size: 4.375rem; */
         text-transform: uppercase;
         letter-spacing: .0625rem;
         color: #fff;
         font-weight: 600;
-		/* line-height: unset; */
 		}
     #home .my-wrapper .name-box font{
       letter-spacing: .0625rem;
@@ -343,14 +322,6 @@ word-wrap: break-word;
 width: 100%;
 text-align: center;
     }
-		
-		      /* #home .my-wrapper .name-box h1 div {
-  overflow: hidden; 
-  border-right: 5px solid white; 
-  white-space: normal; 
-  margin: 0 auto; 
-  display: inline-flex;
-} */
 
 #typing{
   animation: 
@@ -361,26 +332,16 @@ text-align: center;
 
 @keyframes white-space-normal  { to { white-space: normal; } }
 
-/* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
-        /* @media screen and (max-width: 575.98px) { */
-          /* #home .my-wrapper .name-box h1 { */
-            /* font-size: 2.5rem; } } */
-        /* @media (min-width: 576px) and (max-width: 767.98px) { */
-          /* #home .my-wrapper .name-box h1 { */
-            /* font-size: 3.125rem; } } */
-        /* @media (min-width: 768px) and (max-width: 991.98px) { */
-          /* #home .my-wrapper .name-box h1 { */
-            /* font-size: 4rem; } } */
+
             #home .my-wrapper .name-box #center {
               text-align: center; }
         #home .my-wrapper .name-box h1 #highlight {
@@ -570,14 +531,6 @@ text-align: center;
                           .progress .my-bars {
                             background: #E31C25;
                             max-width: 100%; }
-                    /* #about .wrapper .right-wrapper .content ._re_uy_iu .progress {
-                      height: .4375rem;
-                      background: #fff;
-                      position: relative;
-                      margin-bottom: 1.875rem; }
-                      #about .wrapper .right-wrapper .content ._re_uy_iu .progress .my-bars {
-                        background: #E31C25;
-                        max-width: 100%; } */
                 #about .wrapper .right-wrapper ._yt_er_ol {
                   display: flex;
                   flex-flow: column nowrap;
@@ -813,8 +766,7 @@ text-align: center;
         padding: .9375rem;
         position: relative;
         display: inline-block;
-        width: 100%;
-        /* float: left;  */}
+        width: 100%; }
         #portfolio .my-wrapper .wrapper-box .content .nav-tabs {
           display: flex;
           flex: 1 1 100%;
@@ -905,7 +857,6 @@ text-align: center;
                     align-items: baseline;
                   justify-content: center; }
                   #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list ol li ._ok-vd_zs figure figcaption {
-                    /* padding: .3125rem 1.125rem; */
                     color: #fff;
                     letter-spacing: .5px;
                     font-weight: 400;
@@ -933,8 +884,6 @@ text-align: center;
                     text-align: center; }
                   #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list ol li ._ok-vd_zs:hover .hover {
                     transform: scale(1.2) translate(0px, 30px); }
-                    /* #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list ol li ._ok-vd_zs figure .no-hover {
-                      transform: none; } */
                     #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list ol li ._ok-vd_zs:hover figure .inner-content {
                       transform: translateY(0); }
                       #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list ol li ._ok-vd_zs:hover figure .inner-content a {
@@ -985,23 +934,6 @@ text-align: center;
                         border-radius: .1875rem;
                         border: 0;
                         overflow: hidden; }
-
-                        /* #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list ol li ._ok-vd_zs figure .inner-content a:hover {
-                          color: #E31C25; }
-                          #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list ol li ._ok-vd_zs figure .inner-content a:hover::before {
-                            width: 100%; }
-                        #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list ol li ._ok-vd_zs figure .inner-content a::before {
-                          position: absolute;
-                          content: "";
-                          left: 0;
-                          top: 0;
-                          height: 100%;
-                          width: 0;
-                          background: #fff;
-                          transition: all ease-in-out .6s;
-                          z-index: -1;
-                          bottom: 0;
-                          right: 0; } */
             #portfolio .my-wrapper .wrapper-box .content .tab-content .content-list .link-all {
               display: block;
               margin: 1.25rem 0;
@@ -1134,8 +1066,6 @@ text-align: center;
         #contact form .form-group textarea:focus, #contact form .form-group textarea:active {
           outline: none;
           box-shadow: none; }
-
-/*# sourceMappingURL=style.css.map */
 
 /*global style */
 
