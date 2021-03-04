@@ -55,7 +55,10 @@
                 "enter_your_name":"Enter your name",
                 "enter_your_email":"Enter your Email",
                 "subject_optional":"Subject (optinal)",
-                "message":"Message"                             
+                "message":"Message",
+                "faculty": "Faculty",
+                "sending": "Sending...",       
+                "email_sent_successfully": "E-Mail sent successfully!"                   
         },
         "de": {
                 "introduce": "Einführung",

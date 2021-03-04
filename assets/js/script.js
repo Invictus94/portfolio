@@ -81,46 +81,25 @@ function changeLang(lang)
 function translatePage()
 {
   document.querySelectorAll('[data-key]').forEach(function (node) {
-    
-    // var str = node.parentNode.innerHTML;
-    // var first = str.split(node.outerHTML)[0];
-    // //var second = str.substring(str.indexOf(node.outerHTML));
-    // console.log(str.split(node.outerHTML));
-    // node.parentElement.innerHTML = translate(node.dataset.key) + str.substring(first.lastIndexOf(">"), str.indexOf(node.outerHTML));
-
-    // if(node.tagName.toLowerCase() == 'span')
-    // {
-    //   node.innerHTML = translate(node.dataset.key);
-    // }
-    // else
-    // {
-
-    if(placeholderIncluded(node))
+    if(('placeholder' in node))
     {
       node.placeholder = translate(node.dataset.key);
     }
     else
     {
-      node.textContent = translate(node.dataset.key);
+      if(node.id != "hidden")
+      {
+        node.textContent = translate(node.dataset.key);
+      }
+      else
+      {
+        node.dataset.key = "";
+      }
     }
-
-
-
-  //  }
   });
 }
 
 // --------------------------------------
-
-function placeholderIncluded(element) {
-  if (element.getAttribute('placeholder')) {
-    return true;
-  }
-  return false;
-}
-
-// --------------------------------------
-
 
 // function convert() {
 
@@ -132,8 +111,6 @@ function placeholderIncluded(element) {
 // --------------------------------------
 
 function translate(key) {
-  //dictionary.languages["de"]["introduce"] <-> podsjetnik
- // var currentLanguage = $('html').attr('lang');
   return dictionary.languages[document.documentElement.lang.substr(0, 2)][key];
 }
 
@@ -158,6 +135,7 @@ function checkContent(value, justRemoveClass) {
 
       if (node.classList.contains("hidden")) {
         node.classList.remove("hidden");
+        node.setAttribute("id", "hidden");
       }
     });
 
@@ -168,6 +146,7 @@ function checkContent(value, justRemoveClass) {
 
       if (node.classList.contains("hidden")) {
         node.classList.remove("hidden");
+        node.setAttribute("id", "hidden");
       }
     });
   }
@@ -233,7 +212,7 @@ function animate(elem, style, unit, from, to, time, textelem) {
 
 function submitForm() {
   var element = document.getElementById("button-send");
-  element.innerHTML = "Sending...";
+  element.innerHTML = translate("sending");
   element.style.backgroundColor = 'orange';
 
   var name = document.getElementById("121").value;
@@ -244,7 +223,7 @@ function submitForm() {
   var result = sendMail(name, email, subject, message, element);
   result.then(function (resultValue) {
     if (resultValue == "OK") {
-      element.innerHTML = "E-Mail sent successfully!";
+      element.innerHTML = translate(email_sent_successfully);
       element.style.backgroundColor = 'green';
       element.onclick = function () {
         return false;
