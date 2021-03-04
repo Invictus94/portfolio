@@ -95,7 +95,15 @@ function translatePage()
     // else
     // {
 
+    if(placeholderIncluded(node))
+    {
+      node.placeholder = translate(node.dataset.key);
+    }
+    else
+    {
       node.textContent = translate(node.dataset.key);
+    }
+
 
 
   //  }
@@ -103,6 +111,16 @@ function translatePage()
 }
 
 // --------------------------------------
+
+function placeholderIncluded(element) {
+  if (element.getAttribute('placeholder')) {
+    return true;
+  }
+  return false;
+}
+
+// --------------------------------------
+
 
 // function convert() {
 
