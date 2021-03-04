@@ -131,22 +131,22 @@ function checkContent(value, justRemoveClass) {
 
       if (justRemoveClass != 1) {
         node.innerHTML = '<img src="assets/icons/lock.svg" style="height: 20px;"/>';
+        node.setAttribute("id", "hidden");
       }
 
       if (node.classList.contains("hidden")) {
         node.classList.remove("hidden");
-        node.setAttribute("id", "hidden");
       }
     });
 
     document.body.querySelectorAll('#resume .my-wrapper .right-wrapper .content .list-inner ol li h6').forEach(function (node) {
       if (justRemoveClass != 1) {
         node.innerHTML = '<img src="assets/icons/lock.svg" style="height: 20px;"/>';
+        node.setAttribute("id", "hidden");
       }
 
       if (node.classList.contains("hidden")) {
         node.classList.remove("hidden");
-        node.setAttribute("id", "hidden");
       }
     });
   }
@@ -223,7 +223,7 @@ function submitForm() {
   var result = sendMail(name, email, subject, message, element);
   result.then(function (resultValue) {
     if (resultValue == "OK") {
-      element.innerHTML = translate(email_sent_successfully);
+      element.innerHTML = translate("email_sent_successfully");
       element.style.backgroundColor = 'green';
       element.onclick = function () {
         return false;

@@ -58,7 +58,8 @@
                 "message":"Message",
                 "faculty": "Faculty",
                 "sending": "Sending...",       
-                "email_sent_successfully": "E-Mail sent successfully!"                   
+                "email_sent_successfully": "E-Mail sent successfully!",
+                "click_on_the_flag_to_change_the_language" : "*click on the flag to change the language"                   
         },
         "de": {
                 "introduce": "Einführung",
