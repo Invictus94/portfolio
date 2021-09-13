@@ -59,7 +59,8 @@
                 "sending": "Sending...",       
                 "email_sent_successfully": "Message sent successfully!",
                 "click_on_the_flag_to_change_the_language" : "*click on the flag to change the language",
-                "check_fields":"Fill empty text fields!"                  
+                "check_fields":"Fill empty text fields!",
+                "download": "download"                  
         },
         "de": {
                 "introduce": "Einführung",
@@ -120,7 +121,8 @@
                 "sending": "Senden läuft...",       
                 "email_sent_successfully": "Nachricht wurde erfolgreich versendet!",
                 "click_on_the_flag_to_change_the_language" : "*Klicken Sie auf die Flagge, um die Sprache zu ändern",
-                "check_fields":"Füllen Sie leere Textfelder!"
+                "check_fields":"Füllen Sie leere Textfelder!",
+                "download": "herunterladen"           
         },
         "hr": {
             "introduce": "Uvod",
@@ -181,7 +183,8 @@
             "sending": "Slanje...",       
             "email_sent_successfully": "Poruka poslana uspješno!",
             "click_on_the_flag_to_change_the_language" : "*Klik na zastavu za promjenu jezika",
-            "check_fields":"Popunite prazna polja!"  
+            "check_fields":"Popunite prazna polja!",
+            "download": "preuzmi"             
         }
     },
     "code": {
